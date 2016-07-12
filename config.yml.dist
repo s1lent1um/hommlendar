@@ -1,0 +1,20 @@
+
+api_id: 12345
+api_secret: "app secret"
+group_id: 1234567
+
+audio:
+    day: "audio-43304943_197215243"
+    week: "audio-43304943_182778779"
+    month: "audio-43304943_182778785"
+
+death_by_captcha_login: "login"
+death_by_captcha_password: "password"
+
+twitter:
+    hommlendar_token: "oauth_token_secret=qwerty"
+
+    consumer_key: "secret key"
+    consumer_secret: "secret secret"
+
+admin_email: "admin@email.com"

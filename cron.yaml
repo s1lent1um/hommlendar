@@ -1,0 +1,10 @@
+cron:
+- description: Hommlendar twitter status update job
+  url: /update_status
+  schedule: every day 01:00
+- description: Hommlendar vk status update job
+  url: /vk_create
+  schedule: every day 01:00
+- description: Hommlendar vk captcha update job
+  url: /vk_up
+  schedule: every 1 mins from 01:01 to 01:15

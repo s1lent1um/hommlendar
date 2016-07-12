@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authorizing VK</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="application/javascript">
+        $(function(){
+            $("#vklink").click(function(){
+                var newwin = window.open("{{ url|safe }}", "newwin", "menubar=no,location=yes,resizable=yes,scrollbars=no,status=no,width=800,height=500");
+                return false;
+            });
+
+            var params = document.location.hash.substring(1);
+            $("#url_form").submit(function(e) {
+                e.preventDefault();
+                document.location.href = $(this).attr("action") + "?" + $("#url").val().split("#")[1];
+            });
+        })
+    </script>
+</head>
+<body>
+<ol>
+    <li>Разрешите приложению доступ к ВКонтакте, кликнув <a href="" id="vklink">ссылку</a></li>
+    <li>Скопируйте URL окна в поле ниже (как раз то, что окно предупреждает не делать)</li>
+</ol>
+<form method="post" action="/vk_token" id="url_form">
+    <input type="text" name="url" id="url"/>
+    <input type="submit" value="далее"/>
+</form>
+</body>
+</html>

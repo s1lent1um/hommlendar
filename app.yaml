@@ -1,0 +1,32 @@
+application: hommlendar
+version: 2-2
+runtime: python27
+api_version: 1
+threadsafe: no
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /
+  script: main.app
+
+- url: /update_status
+  script: update_status.app
+  login: admin
+
+- url: /vk.*
+  script: vk.app
+  login: admin
+
+- url: /rss\.xml
+  script: rss.app
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+- name: yaml
+  version: "3.10"
+# - name: tweepy
+#   version: "1.0"

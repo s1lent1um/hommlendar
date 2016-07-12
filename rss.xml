@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+
+    <channel>
+        <link>https://twitter.com/nwccoconuts</link>
+        <title>Хоммлендарь</title>
+        <description>Героическая служба сигналов точного времени</description>
+        <language>ru-ru</language>
+        <copyright>Copyleft</copyright>
+        <author>Astrologer</author>
+
+        <image>
+            <link>https://twitter.com/nwccoconuts</link>
+            <url>https://si0.twimg.com/profile_images/2204260791/heroes_3_icon3_bigger.png</url>
+            <title>В Твиттере!</title>
+        </image>
+
+        {% for entity in entities %}
+        <item>
+            <link>https://twitter.com/nwccoconuts</link>
+            <title>{{entity.text}}</title>
+            <pubDate>{{entity.pubDate}}</pubDate>
+        </item>
+        {% endfor %}
+
+    </channel>
+</rss> 
