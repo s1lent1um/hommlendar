@@ -12,7 +12,7 @@ except ImportError:
 from vkontakte import http
 
 API_URL = 'http://api.vk.com/api.php'
-SECURE_API_URL = 'https://api.vkontakte.ru/method/'
+SECURE_API_URL = 'https://api.vk.com/method/'
 DEFAULT_TIMEOUT = 1
 REQUEST_ENCODING = 'utf8'
 
