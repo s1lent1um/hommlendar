@@ -141,7 +141,7 @@ class _API(object):
             # http://vkontakte.ru/developers.php?oid=-1&p=Выполнение_запросов_к_API
             params = dict(
                 access_token=self.token,
-                v='4.104',
+                v='5.00',
             )
             params.update(kwargs)
             params['timestamp'] = int(time.time())
